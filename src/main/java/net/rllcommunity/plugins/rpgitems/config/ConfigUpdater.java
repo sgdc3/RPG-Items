@@ -37,9 +37,9 @@ public class ConfigUpdater {
     public static void updateConfig(ConfigurationSection conf) {
         while (!conf.getString("version", "0.0").equals(CONFIG_VERSION)) {
             if (!conf.contains("version")) {
-                if (!conf.contains("autoupdate")) {
+                /*if (!conf.contains("autoupdate")) {
                     conf.set("autoupdate", true);
-                }
+                }*/
                 if (!conf.contains("defaults.hand")) {
                     conf.set("defaults.hand", "One handed");
                 }
