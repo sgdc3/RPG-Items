@@ -1,3 +1,3 @@
-RPG-Items
+RpgItemsReloaded
 =========
-Feel free to submit a pull request if you add/fix stuff
+RllCommunity version for Spigot 1.8
