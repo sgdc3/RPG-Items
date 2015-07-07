@@ -14,15 +14,15 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.power;
+package net.rllcommunity.plugins.rpgitems.power;
 
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import think.rpgitems.data.Locale;
-import think.rpgitems.power.types.PowerRightClick;
+import net.rllcommunity.plugins.rpgitems.data.Locale;
+import net.rllcommunity.plugins.rpgitems.power.types.PowerRightClick;
 
 public class PowerConsume extends Power implements PowerRightClick {
 

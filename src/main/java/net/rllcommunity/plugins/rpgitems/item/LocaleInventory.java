@@ -1,4 +1,4 @@
-package think.rpgitems.item;
+package net.rllcommunity.plugins.rpgitems.item;
 
 import java.util.Iterator;
 
@@ -12,7 +12,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
-import think.rpgitems.data.Locale;
+import net.rllcommunity.plugins.rpgitems.data.Locale;
 
 public class LocaleInventory extends InventoryView {
     

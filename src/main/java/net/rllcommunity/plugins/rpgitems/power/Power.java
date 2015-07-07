@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.power;
+package net.rllcommunity.plugins.rpgitems.power;
 
 import gnu.trove.map.hash.TObjectIntHashMap;
 
@@ -25,7 +25,7 @@ import org.bukkit.Location;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Entity;
 
-import think.rpgitems.item.RPGItem;
+import net.rllcommunity.plugins.rpgitems.item.RPGItem;
 
 public abstract class Power {
 

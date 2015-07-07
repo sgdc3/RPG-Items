@@ -1,4 +1,4 @@
-package think.rpgitems.data;
+package net.rllcommunity.plugins.rpgitems.data;
 
 import gnu.trove.iterator.TIntObjectIterator;
 import gnu.trove.map.hash.TIntObjectHashMap;

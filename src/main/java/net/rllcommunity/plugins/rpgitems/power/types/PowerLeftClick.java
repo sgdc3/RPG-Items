@@ -1,4 +1,4 @@
-package think.rpgitems.power.types;
+package net.rllcommunity.plugins.rpgitems.power.types;
 
 import org.bukkit.entity.Player;
 

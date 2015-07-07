@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.item;
+package net.rllcommunity.plugins.rpgitems.item;
 
 import gnu.trove.map.hash.TObjectDoubleHashMap;
 
@@ -44,17 +44,17 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
-import think.rpgitems.Events;
-import think.rpgitems.Plugin;
-import think.rpgitems.data.Font;
-import think.rpgitems.data.Locale;
-import think.rpgitems.data.RPGMetadata;
-import think.rpgitems.power.Power;
-import think.rpgitems.power.types.PowerHit;
-import think.rpgitems.power.types.PowerLeftClick;
-import think.rpgitems.power.types.PowerProjectileHit;
-import think.rpgitems.power.types.PowerRightClick;
-import think.rpgitems.power.types.PowerTick;
+import net.rllcommunity.plugins.rpgitems.Events;
+import net.rllcommunity.plugins.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.data.Font;
+import net.rllcommunity.plugins.rpgitems.data.Locale;
+import net.rllcommunity.plugins.rpgitems.data.RPGMetadata;
+import net.rllcommunity.plugins.rpgitems.power.Power;
+import net.rllcommunity.plugins.rpgitems.power.types.PowerHit;
+import net.rllcommunity.plugins.rpgitems.power.types.PowerLeftClick;
+import net.rllcommunity.plugins.rpgitems.power.types.PowerProjectileHit;
+import net.rllcommunity.plugins.rpgitems.power.types.PowerRightClick;
+import net.rllcommunity.plugins.rpgitems.power.types.PowerTick;
 
 public class RPGItem {
     private ItemStack item;

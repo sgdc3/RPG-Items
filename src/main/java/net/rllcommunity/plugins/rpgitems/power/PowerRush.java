@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.power;
+package net.rllcommunity.plugins.rpgitems.power;
 
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.ConfigurationSection;
@@ -22,8 +22,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import think.rpgitems.data.RPGValue;
-import think.rpgitems.power.types.PowerRightClick;
+import net.rllcommunity.plugins.rpgitems.data.RPGValue;
+import net.rllcommunity.plugins.rpgitems.power.types.PowerRightClick;
 
 @Deprecated
 public class PowerRush extends Power implements PowerRightClick {

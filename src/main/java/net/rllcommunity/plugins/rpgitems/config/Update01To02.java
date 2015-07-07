@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.config;
+package net.rllcommunity.plugins.rpgitems.config;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,7 +22,7 @@ import java.io.IOException;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
 
-import think.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.Plugin;
 
 public class Update01To02 implements Updater {
 

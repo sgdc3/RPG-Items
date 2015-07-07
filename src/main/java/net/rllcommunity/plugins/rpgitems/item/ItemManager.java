@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.item;
+package net.rllcommunity.plugins.rpgitems.item;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -36,8 +36,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.util.FileUtil;
 
-import think.rpgitems.Plugin;
-import think.rpgitems.power.Power;
+import net.rllcommunity.plugins.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.power.Power;
 
 public class ItemManager {
     public static TIntObjectHashMap<RPGItem> itemById = new TIntObjectHashMap<RPGItem>();

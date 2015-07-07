@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.data;
+package net.rllcommunity.plugins.rpgitems.data;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -37,9 +37,9 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import think.rpgitems.Plugin;
-import think.rpgitems.item.ItemManager;
-import think.rpgitems.item.RPGItem;
+import net.rllcommunity.plugins.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.item.ItemManager;
+import net.rllcommunity.plugins.rpgitems.item.RPGItem;
 
 public class Locale extends BukkitRunnable {
     

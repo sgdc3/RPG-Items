@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.power;
+package net.rllcommunity.plugins.rpgitems.power;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;
@@ -22,10 +22,10 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Player;
 
-import think.rpgitems.Events;
-import think.rpgitems.data.Locale;
-import think.rpgitems.data.RPGValue;
-import think.rpgitems.power.types.PowerRightClick;
+import net.rllcommunity.plugins.rpgitems.Events;
+import net.rllcommunity.plugins.rpgitems.data.Locale;
+import net.rllcommunity.plugins.rpgitems.data.RPGValue;
+import net.rllcommunity.plugins.rpgitems.power.types.PowerRightClick;
 
 public class PowerArrow extends Power implements PowerRightClick{
 

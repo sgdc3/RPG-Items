@@ -1,4 +1,4 @@
-package think.rpgitems.config;
+package net.rllcommunity.plugins.rpgitems.config;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,12 +17,12 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
-import think.rpgitems.Plugin;
-import think.rpgitems.data.Locale;
-import think.rpgitems.item.ItemManager;
-import think.rpgitems.item.Quality;
-import think.rpgitems.item.RPGItem;
-import think.rpgitems.power.Power;
+import net.rllcommunity.plugins.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.data.Locale;
+import net.rllcommunity.plugins.rpgitems.item.ItemManager;
+import net.rllcommunity.plugins.rpgitems.item.Quality;
+import net.rllcommunity.plugins.rpgitems.item.RPGItem;
+import net.rllcommunity.plugins.rpgitems.power.Power;
 
 public class Update02To03 implements Updater {
 

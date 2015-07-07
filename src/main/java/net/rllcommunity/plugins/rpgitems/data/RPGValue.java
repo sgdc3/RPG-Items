@@ -14,13 +14,13 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.data;
+package net.rllcommunity.plugins.rpgitems.data;
 
 import java.util.HashMap;
 
 import org.bukkit.entity.Player;
 
-import think.rpgitems.item.RPGItem;
+import net.rllcommunity.plugins.rpgitems.item.RPGItem;
 
 public class RPGValue {
 

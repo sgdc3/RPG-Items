@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.config;
+package net.rllcommunity.plugins.rpgitems.config;
 
 import org.bukkit.configuration.ConfigurationSection;
 

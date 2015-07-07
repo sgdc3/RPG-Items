@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.power;
+package net.rllcommunity.plugins.rpgitems.power;
 
 import java.util.Random;
 
@@ -24,9 +24,9 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Projectile;
 
-import think.rpgitems.data.Locale;
-import think.rpgitems.power.types.PowerHit;
-import think.rpgitems.power.types.PowerProjectileHit;
+import net.rllcommunity.plugins.rpgitems.data.Locale;
+import net.rllcommunity.plugins.rpgitems.power.types.PowerHit;
+import net.rllcommunity.plugins.rpgitems.power.types.PowerProjectileHit;
 
 public class PowerLightning extends Power implements PowerHit, PowerProjectileHit {
 

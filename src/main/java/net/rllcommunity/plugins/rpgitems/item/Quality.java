@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.item;
+package net.rllcommunity.plugins.rpgitems.item;
 
 import org.bukkit.ChatColor;
 

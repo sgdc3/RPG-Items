@@ -14,12 +14,12 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.data;
+package net.rllcommunity.plugins.rpgitems.data;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import think.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.Plugin;
 
 public class Font {
     public static int[] widths;

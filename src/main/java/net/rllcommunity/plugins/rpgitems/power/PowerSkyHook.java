@@ -1,4 +1,4 @@
-package think.rpgitems.power;
+package net.rllcommunity.plugins.rpgitems.power;
 
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -10,10 +10,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
-import think.rpgitems.Plugin;
-import think.rpgitems.data.Locale;
-import think.rpgitems.data.RPGValue;
-import think.rpgitems.power.types.PowerRightClick;
+import net.rllcommunity.plugins.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.data.Locale;
+import net.rllcommunity.plugins.rpgitems.data.RPGValue;
+import net.rllcommunity.plugins.rpgitems.power.types.PowerRightClick;
 
 public class PowerSkyHook extends Power implements PowerRightClick {
     

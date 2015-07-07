@@ -1,4 +1,4 @@
-package think.rpgitems.power;
+package net.rllcommunity.plugins.rpgitems.power;
 
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.ConfigurationSection;
@@ -6,8 +6,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import think.rpgitems.data.Locale;
-import think.rpgitems.power.types.PowerTick;
+import net.rllcommunity.plugins.rpgitems.data.Locale;
+import net.rllcommunity.plugins.rpgitems.power.types.PowerTick;
 
 public class PowerPotionTick extends Power implements PowerTick {
 

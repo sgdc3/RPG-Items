@@ -1,4 +1,4 @@
-package think.rpgitems.item;
+package net.rllcommunity.plugins.rpgitems.item;
 
 import java.util.ArrayList;
 import java.util.List;
