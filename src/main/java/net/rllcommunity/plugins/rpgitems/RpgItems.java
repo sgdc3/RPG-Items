@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems;
+package net.rllcommunity.plugins.rpgitems;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -32,42 +32,40 @@ import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.mcstats.Metrics;
-import org.mcstats.Metrics.Graph;
 
-import think.rpgitems.commands.Commands;
-import think.rpgitems.config.ConfigUpdater;
-import think.rpgitems.data.Font;
-import think.rpgitems.data.Locale;
-import think.rpgitems.data.RPGMetadata;
-import think.rpgitems.item.ItemManager;
-import think.rpgitems.power.Power;
-import think.rpgitems.power.PowerArrow;
-import think.rpgitems.power.PowerCommand;
-import think.rpgitems.power.PowerConsume;
-import think.rpgitems.power.PowerFireball;
-import think.rpgitems.power.PowerFlame;
-import think.rpgitems.power.PowerIce;
-import think.rpgitems.power.PowerKnockup;
-import think.rpgitems.power.PowerLightning;
-import think.rpgitems.power.PowerPotionHit;
-import think.rpgitems.power.PowerPotionSelf;
-import think.rpgitems.power.PowerPotionTick;
-import think.rpgitems.power.PowerRainbow;
-import think.rpgitems.power.PowerRumble;
-import think.rpgitems.power.PowerRush;
-import think.rpgitems.power.PowerSkyHook;
-import think.rpgitems.power.PowerTNTCannon;
-import think.rpgitems.power.PowerTeleport;
-import think.rpgitems.power.PowerTicker;
-import think.rpgitems.power.PowerUnbreakable;
-import think.rpgitems.power.PowerUnbreaking;
-import think.rpgitems.support.WorldGuard;
+import net.rllcommunity.plugins.rpgitems.commands.Commands;
+import net.rllcommunity.plugins.rpgitems.config.ConfigUpdater;
+import net.rllcommunity.plugins.rpgitems.data.Font;
+import net.rllcommunity.plugins.rpgitems.data.Locale;
+import net.rllcommunity.plugins.rpgitems.data.RPGMetadata;
+import net.rllcommunity.plugins.rpgitems.item.ItemManager;
+import net.rllcommunity.plugins.rpgitems.power.Power;
+import net.rllcommunity.plugins.rpgitems.power.PowerArrow;
+import net.rllcommunity.plugins.rpgitems.power.PowerCommand;
+import net.rllcommunity.plugins.rpgitems.power.PowerConsume;
+import net.rllcommunity.plugins.rpgitems.power.PowerFireball;
+import net.rllcommunity.plugins.rpgitems.power.PowerFlame;
+import net.rllcommunity.plugins.rpgitems.power.PowerIce;
+import net.rllcommunity.plugins.rpgitems.power.PowerKnockup;
+import net.rllcommunity.plugins.rpgitems.power.PowerLightning;
+import net.rllcommunity.plugins.rpgitems.power.PowerPotionHit;
+import net.rllcommunity.plugins.rpgitems.power.PowerPotionSelf;
+import net.rllcommunity.plugins.rpgitems.power.PowerPotionTick;
+import net.rllcommunity.plugins.rpgitems.power.PowerRainbow;
+import net.rllcommunity.plugins.rpgitems.power.PowerRumble;
+import net.rllcommunity.plugins.rpgitems.power.PowerRush;
+import net.rllcommunity.plugins.rpgitems.power.PowerSkyHook;
+import net.rllcommunity.plugins.rpgitems.power.PowerTNTCannon;
+import net.rllcommunity.plugins.rpgitems.power.PowerTeleport;
+import net.rllcommunity.plugins.rpgitems.power.PowerTicker;
+import net.rllcommunity.plugins.rpgitems.power.PowerUnbreakable;
+import net.rllcommunity.plugins.rpgitems.power.PowerUnbreaking;
+import net.rllcommunity.plugins.rpgitems.support.WorldGuard;
 
 @SuppressWarnings("deprecation")
 public class Plugin extends JavaPlugin {
 
-    public static Logger logger = Logger.getLogger("RPGItems");
+    public static Logger logger = Logger.getLogger("RPGItemsReloaded");
 
     public static Plugin plugin;
 
@@ -103,38 +101,11 @@ public class Plugin extends JavaPlugin {
         updateConfig();
         WorldGuard.init(this);
         ConfigurationSection conf = getConfig();
-        if (conf.getBoolean("autoupdate", true)) {
-            new Updater(this, "rpg-items", this.getFile(), Updater.UpdateType.DEFAULT, false);
-        }
         if (conf.getBoolean("localeInv", false)) {
             Events.useLocaleInv = true;
         }
         getServer().getPluginManager().registerEvents(new Events(), this);
         ItemManager.load(this);
-
-        try {
-            Metrics metrics = new Metrics(this);
-            metrics.addCustomData(new Metrics.Plotter("Total Items") {
-
-                @Override
-                public int getValue() {
-                    return ItemManager.itemByName.size();
-                }
-            });
-            Graph graph = metrics.createGraph("Power usage");
-            for (String powerName : Power.powers.keySet()) {
-                graph.addPlotter(new Metrics.Plotter(powerName) {
-
-                    @Override
-                    public int getValue() {
-                        return Power.powerUsage.get(getColumnName());
-                    }
-                });
-            }
-            metrics.addGraph(graph);
-            metrics.start();
-        } catch (Exception e) {
-        }
         Commands.register(new Handler());
         Commands.register(new PowerHandler());
         new PowerTicker().runTaskTimer(this, 0, 1);

@@ -1,9 +1,9 @@
-package think.rpgitems.api;
+package net.rllcommunity.plugins.rpgitems.api;
 
 import org.bukkit.inventory.ItemStack;
 
-import think.rpgitems.item.ItemManager;
-import think.rpgitems.item.RPGItem;
+import net.rllcommunity.plugins.rpgitems.item.ItemManager;
+import net.rllcommunity.plugins.rpgitems.item.RPGItem;
 
 public class RPGItems {
 

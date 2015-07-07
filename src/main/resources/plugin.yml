@@ -1,7 +1,7 @@
-name: RPG Items
-main: think.rpgitems.Plugin
-version: ${project_version}
-dev-url: http://dev.bukkit.org/server-mods/rpg-items/
+name: RPGItemsReloaded
+main: net.rllcommunity.plugins.rpgitems.RpgItems
+version: maven-version
+#dev-url: http://dev.bukkit.org/server-mods/rpg-items/
 softdepend: [WorldGuard]
 commands:
     rpgitem:

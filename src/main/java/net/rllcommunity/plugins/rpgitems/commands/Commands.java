@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems.commands;
+package net.rllcommunity.plugins.rpgitems.commands;
 
 import gnu.trove.map.hash.TCharObjectHashMap;
 
@@ -47,10 +47,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffectType;
 
-import think.rpgitems.Plugin;
-import think.rpgitems.data.Locale;
-import think.rpgitems.item.ItemManager;
-import think.rpgitems.item.RPGItem;
+import net.rllcommunity.plugins.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.data.Locale;
+import net.rllcommunity.plugins.rpgitems.item.ItemManager;
+import net.rllcommunity.plugins.rpgitems.item.RPGItem;
 
 abstract public class Commands {
     private static HashMap<String, ArrayList<CommandDef>> commands = new HashMap<String, ArrayList<CommandDef>>();

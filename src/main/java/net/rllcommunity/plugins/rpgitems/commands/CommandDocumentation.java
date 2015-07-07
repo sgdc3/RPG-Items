@@ -1,4 +1,4 @@
-package think.rpgitems.commands;
+package net.rllcommunity.plugins.rpgitems.commands;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RPG Items.  If not, see <http://www.gnu.org/licenses/>.
  */
-package think.rpgitems;
+package net.rllcommunity.plugins.rpgitems;
 
 import gnu.trove.map.hash.TIntByteHashMap;
 import gnu.trove.map.hash.TIntIntHashMap;
@@ -59,12 +59,12 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import think.rpgitems.data.Locale;
-import think.rpgitems.data.RPGMetadata;
-import think.rpgitems.item.ItemManager;
-import think.rpgitems.item.LocaleInventory;
-import think.rpgitems.item.RPGItem;
-import think.rpgitems.support.WorldGuard;
+import net.rllcommunity.plugins.rpgitems.data.Locale;
+import net.rllcommunity.plugins.rpgitems.data.RPGMetadata;
+import net.rllcommunity.plugins.rpgitems.item.ItemManager;
+import net.rllcommunity.plugins.rpgitems.item.LocaleInventory;
+import net.rllcommunity.plugins.rpgitems.item.RPGItem;
+import net.rllcommunity.plugins.rpgitems.support.WorldGuard;
 
 public class Events implements Listener {
 

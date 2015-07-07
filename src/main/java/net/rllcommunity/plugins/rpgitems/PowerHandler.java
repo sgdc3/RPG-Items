@@ -1,4 +1,4 @@
-package think.rpgitems;
+package net.rllcommunity.plugins.rpgitems;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -6,31 +6,31 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffectType;
 
-import think.rpgitems.commands.CommandDocumentation;
-import think.rpgitems.commands.CommandGroup;
-import think.rpgitems.commands.CommandHandler;
-import think.rpgitems.commands.CommandString;
-import think.rpgitems.data.Locale;
-import think.rpgitems.item.ItemManager;
-import think.rpgitems.item.RPGItem;
-import think.rpgitems.power.PowerArrow;
-import think.rpgitems.power.PowerCommand;
-import think.rpgitems.power.PowerConsume;
-import think.rpgitems.power.PowerFireball;
-import think.rpgitems.power.PowerFlame;
-import think.rpgitems.power.PowerIce;
-import think.rpgitems.power.PowerKnockup;
-import think.rpgitems.power.PowerLightning;
-import think.rpgitems.power.PowerPotionHit;
-import think.rpgitems.power.PowerPotionSelf;
-import think.rpgitems.power.PowerPotionTick;
-import think.rpgitems.power.PowerRainbow;
-import think.rpgitems.power.PowerRumble;
-import think.rpgitems.power.PowerSkyHook;
-import think.rpgitems.power.PowerTNTCannon;
-import think.rpgitems.power.PowerTeleport;
-import think.rpgitems.power.PowerUnbreakable;
-import think.rpgitems.power.PowerUnbreaking;
+import net.rllcommunity.plugins.rpgitems.commands.CommandDocumentation;
+import net.rllcommunity.plugins.rpgitems.commands.CommandGroup;
+import net.rllcommunity.plugins.rpgitems.commands.CommandHandler;
+import net.rllcommunity.plugins.rpgitems.commands.CommandString;
+import net.rllcommunity.plugins.rpgitems.data.Locale;
+import net.rllcommunity.plugins.rpgitems.item.ItemManager;
+import net.rllcommunity.plugins.rpgitems.item.RPGItem;
+import net.rllcommunity.plugins.rpgitems.power.PowerArrow;
+import net.rllcommunity.plugins.rpgitems.power.PowerCommand;
+import net.rllcommunity.plugins.rpgitems.power.PowerConsume;
+import net.rllcommunity.plugins.rpgitems.power.PowerFireball;
+import net.rllcommunity.plugins.rpgitems.power.PowerFlame;
+import net.rllcommunity.plugins.rpgitems.power.PowerIce;
+import net.rllcommunity.plugins.rpgitems.power.PowerKnockup;
+import net.rllcommunity.plugins.rpgitems.power.PowerLightning;
+import net.rllcommunity.plugins.rpgitems.power.PowerPotionHit;
+import net.rllcommunity.plugins.rpgitems.power.PowerPotionSelf;
+import net.rllcommunity.plugins.rpgitems.power.PowerPotionTick;
+import net.rllcommunity.plugins.rpgitems.power.PowerRainbow;
+import net.rllcommunity.plugins.rpgitems.power.PowerRumble;
+import net.rllcommunity.plugins.rpgitems.power.PowerSkyHook;
+import net.rllcommunity.plugins.rpgitems.power.PowerTNTCannon;
+import net.rllcommunity.plugins.rpgitems.power.PowerTeleport;
+import net.rllcommunity.plugins.rpgitems.power.PowerUnbreakable;
+import net.rllcommunity.plugins.rpgitems.power.PowerUnbreaking;
 
 public class PowerHandler implements CommandHandler {
 

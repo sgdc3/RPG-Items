@@ -1,4 +1,4 @@
-package think.rpgitems;
+package net.rllcommunity.plugins.rpgitems;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -16,16 +16,16 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
-import think.rpgitems.commands.CommandDocumentation;
-import think.rpgitems.commands.CommandGroup;
-import think.rpgitems.commands.CommandHandler;
-import think.rpgitems.commands.CommandString;
-import think.rpgitems.data.Locale;
-import think.rpgitems.item.ItemManager;
-import think.rpgitems.item.Quality;
-import think.rpgitems.item.RPGItem;
-import think.rpgitems.power.Power;
-import think.rpgitems.support.WorldGuard;
+import net.rllcommunity.plugins.rpgitems.commands.CommandDocumentation;
+import net.rllcommunity.plugins.rpgitems.commands.CommandGroup;
+import net.rllcommunity.plugins.rpgitems.commands.CommandHandler;
+import net.rllcommunity.plugins.rpgitems.commands.CommandString;
+import net.rllcommunity.plugins.rpgitems.data.Locale;
+import net.rllcommunity.plugins.rpgitems.item.ItemManager;
+import net.rllcommunity.plugins.rpgitems.item.Quality;
+import net.rllcommunity.plugins.rpgitems.item.RPGItem;
+import net.rllcommunity.plugins.rpgitems.power.Power;
+import net.rllcommunity.plugins.rpgitems.support.WorldGuard;
 
 public class Handler implements CommandHandler {
 
@@ -164,7 +164,7 @@ public class Handler implements CommandHandler {
         sender.sendMessage(ChatColor.AQUA + String.format(Locale.get("message.quality.get", locale), item.getName(), item.getQuality().toString().toLowerCase()));
     }
 
-    @CommandString("rpgitem $n[] quality $e[think.rpgitems.item.Quality]")
+    @CommandString("rpgitem $n[] quality $e[net.rllcommunity.plugins.rpgitems.item.Quality]")
     @CommandDocumentation("$command.rpgitem.quality.set")
     @CommandGroup("item_quality")
     public void setItemQuality(CommandSender sender, RPGItem item, Quality quality) {
