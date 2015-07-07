@@ -37,7 +37,6 @@ import net.rllcommunity.plugins.rpgitems.commands.Commands;
 import net.rllcommunity.plugins.rpgitems.config.ConfigUpdater;
 import net.rllcommunity.plugins.rpgitems.data.Font;
 import net.rllcommunity.plugins.rpgitems.data.Locale;
-import net.rllcommunity.plugins.rpgitems.data.RPGMetadata;
 import net.rllcommunity.plugins.rpgitems.item.ItemManager;
 import net.rllcommunity.plugins.rpgitems.power.Power;
 import net.rllcommunity.plugins.rpgitems.power.PowerArrow;
@@ -63,11 +62,11 @@ import net.rllcommunity.plugins.rpgitems.power.PowerUnbreaking;
 import net.rllcommunity.plugins.rpgitems.support.WorldGuard;
 
 @SuppressWarnings("deprecation")
-public class Plugin extends JavaPlugin {
+public class RpgItems extends JavaPlugin {
 
     public static Logger logger = Logger.getLogger("RPGItemsReloaded");
 
-    public static Plugin plugin;
+    public static RpgItems plugin;
 
     @Override
     public void onLoad() {

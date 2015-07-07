@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 import org.bukkit.configuration.ConfigurationSection;
 
-import net.rllcommunity.plugins.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.RpgItems;
 import net.rllcommunity.plugins.rpgitems.item.ItemManager;
 import net.rllcommunity.plugins.rpgitems.item.RPGItem;
 import net.rllcommunity.plugins.rpgitems.power.Power;
@@ -15,7 +15,7 @@ public class Update03To04 implements Updater {
 
     @Override
     public void update(ConfigurationSection section) {
-        Plugin plugin = Plugin.plugin;
+        RpgItems plugin = RpgItems.plugin;
         
         ItemManager.load(plugin);
 

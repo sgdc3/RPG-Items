@@ -1,5 +1,7 @@
 package net.rllcommunity.plugins.rpgitems.power;
 
+import java.util.Collection;
+
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -12,7 +14,7 @@ public class PowerTicker extends BukkitRunnable {
 
     @Override
     public void run() {
-        Player[] players = Bukkit.getOnlinePlayers();
+        Collection<? extends Player> players = Bukkit.getOnlinePlayers();
         for (Player player : players) {
             ItemStack[] armour = player.getInventory().getArmorContents();
             for (ItemStack part : armour) {

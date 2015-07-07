@@ -36,7 +36,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.util.FileUtil;
 
-import net.rllcommunity.plugins.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.RpgItems;
 import net.rllcommunity.plugins.rpgitems.power.Power;
 
 public class ItemManager {
@@ -45,7 +45,7 @@ public class ItemManager {
     public static HashMap<String, ItemGroup> groups = new HashMap<String, ItemGroup>();
     public static int currentPos = 0;
 
-    public static void load(Plugin plugin) {
+    public static void load(RpgItems plugin) {
         try {
             FileInputStream in = null;
             YamlConfiguration itemStorage = null;
@@ -110,7 +110,7 @@ public class ItemManager {
         }
     }
 
-    public static void save(Plugin plugin) {
+    public static void save(RpgItems plugin) {
 
         YamlConfiguration itemStorage = new YamlConfiguration();
 

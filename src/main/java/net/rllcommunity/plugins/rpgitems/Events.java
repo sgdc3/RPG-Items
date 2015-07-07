@@ -24,7 +24,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
@@ -55,8 +54,6 @@ import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.projectiles.ProjectileSource;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -132,14 +129,13 @@ public class Events implements Listener {
                     rpgProjectiles.remove(entity.getEntityId());
 
                 }
-            }.runTask(Plugin.plugin);
+            }.runTask(RpgItems.plugin);
             if (item == null)
                 return;
             item.projectileHit((Player) ((Projectile) entity).getShooter(), (Projectile) entity);
         }
     }
 
-    @SuppressWarnings("deprecation")
     @EventHandler
     public void onProjectileFire(ProjectileLaunchEvent e) {
         ProjectileSource shooter = e.getEntity().getShooter();
@@ -259,7 +255,7 @@ public class Events implements Listener {
             }
             item.hasRecipe = true;
             item.resetRecipe(true);
-            ItemManager.save(Plugin.plugin);
+            ItemManager.save(RpgItems.plugin);
             ((Player) e.getPlayer()).sendMessage(ChatColor.AQUA + "Recipe set for " + item.getName());
         } else if (useLocaleInv && e.getView() instanceof LocaleInventory) {
             localeInventories.remove(e.getView());
@@ -322,7 +318,6 @@ public class Events implements Listener {
 
     private Random random = new Random();
 
-    @SuppressWarnings("deprecation")
     private int playerDamager(EntityDamageByEntityEvent e, int damage) {
         Player player = (Player) e.getDamager();
         ItemStack item = player.getItemInHand();

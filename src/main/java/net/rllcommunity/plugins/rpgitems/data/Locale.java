@@ -37,7 +37,7 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import net.rllcommunity.plugins.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.RpgItems;
 import net.rllcommunity.plugins.rpgitems.item.ItemManager;
 import net.rllcommunity.plugins.rpgitems.item.RPGItem;
 
@@ -51,11 +51,11 @@ public class Locale extends BukkitRunnable {
     
     private static HashMap<String, HashMap<String, String>> localeStrings = new HashMap<String, HashMap<String,String>>();
     
-    private Plugin plugin;
+    private RpgItems plugin;
     private long lastUpdate = 0;
     private File dataFolder;
     private String version;
-    private Locale(Plugin plugin) {
+    private Locale(RpgItems plugin) {
         this.plugin = plugin;
         lastUpdate = plugin.getConfig().getLong("lastLocaleUpdate", 0);
         version = plugin.getDescription().getVersion();
@@ -127,7 +127,7 @@ public class Locale extends BukkitRunnable {
         }).runTask(plugin);
     }
     
-    public static void reloadLocales(Plugin plugin) {
+    public static void reloadLocales(RpgItems plugin) {
         localeStrings.clear();
         localeStrings.put("en_GB", loadLocaleStream(plugin.getResource("locale/en_GB.lang")));
 
@@ -191,7 +191,7 @@ public class Locale extends BukkitRunnable {
                     canLocale = false;
                 }
             } catch (Exception e) {
-                Plugin.plugin.getLogger().warning("Failed to get player locale");
+                RpgItems.plugin.getLogger().warning("Failed to get player locale");
                 canLocale = false;
             }
             firstTime = false;
@@ -204,14 +204,14 @@ public class Locale extends BukkitRunnable {
             Object locale = getLocale.invoke(minePlayer, (Object[]) null);
             return (String) language.get(locale);
         } catch (Exception e) {
-            Plugin.plugin.getLogger().warning("Failed to get player locale");
+            RpgItems.plugin.getLogger().warning("Failed to get player locale");
             canLocale = false;
         } 
         //Any error default to en_GB
         return "en_GB";
     }
 
-    public static void init(Plugin plugin) {
+    public static void init(RpgItems plugin) {
         (new Locale(plugin)).runTaskTimerAsynchronously(plugin, 0, 24l * 60l * 60l * 20l);
     }
     

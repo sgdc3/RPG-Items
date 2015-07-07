@@ -1,5 +1,7 @@
 package net.rllcommunity.plugins.rpgitems.power;
 
+import java.util.Set;
+
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
@@ -10,7 +12,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
-import net.rllcommunity.plugins.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.RpgItems;
 import net.rllcommunity.plugins.rpgitems.data.Locale;
 import net.rllcommunity.plugins.rpgitems.data.RPGValue;
 import net.rllcommunity.plugins.rpgitems.power.types.PowerRightClick;
@@ -31,7 +33,7 @@ public class PowerSkyHook extends Power implements PowerRightClick {
             isHooking.set(false);
             return;
         }
-        Block block = player.getTargetBlock(null, hookDistance);
+        Block block = player.getTargetBlock((Set<Material>) null, hookDistance);
         if (block.getType() != railMaterial) {
             player.sendMessage(ChatColor.AQUA + Locale.get("message.skyhook.fail", Locale.getPlayerLocale(player)));
             return;
@@ -82,7 +84,7 @@ public class PowerSkyHook extends Power implements PowerRightClick {
                 player.setVelocity(dir.multiply(0.5));
                 
             }
-        }).runTaskTimer(Plugin.plugin, 0, 0);
+        }).runTaskTimer(RpgItems.plugin, 0, 0);
     }
 
     @Override

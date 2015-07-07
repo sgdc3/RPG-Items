@@ -20,7 +20,7 @@ import java.util.HashMap;
 
 import org.bukkit.configuration.ConfigurationSection;
 
-import net.rllcommunity.plugins.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.RpgItems;
 
 public class ConfigUpdater {
 
@@ -56,7 +56,7 @@ public class ConfigUpdater {
                     conf.set("support.worldguard", false);
                 }
                 conf.set("version", "0.1");
-                Plugin.plugin.saveConfig();
+                RpgItems.plugin.saveConfig();
             } else {
                 if (updates.containsKey(conf.get("version"))) {
                     updates.get(conf.get("version")).update(conf);

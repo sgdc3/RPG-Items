@@ -29,7 +29,7 @@ public class WorldGuard {
     private static boolean hasSupport = false;
     public static boolean useWorldGuard = true;
 
-    public static void init(net.rllcommunity.plugins.rpgitems.Plugin plugin2) {
+    public static void init(net.rllcommunity.plugins.rpgitems.RpgItems plugin2) {
         Plugin plugin = plugin2.getServer().getPluginManager().getPlugin("WorldGuard");
         useWorldGuard = plugin2.getConfig().getBoolean("support.worldguard", false);
         if (plugin == null || !(plugin instanceof WorldGuardPlugin)) {
@@ -37,7 +37,7 @@ public class WorldGuard {
         }
         hasSupport = true;
         WorldGuard.plugin = (WorldGuardPlugin) plugin;
-        net.rllcommunity.plugins.rpgitems.Plugin.logger.info("[RPGItemsReloaded] World Guard found");
+        net.rllcommunity.plugins.rpgitems.RpgItems.logger.info("[RPGItemsReloaded] World Guard found");
     }
 
     public static boolean isEnabled() {

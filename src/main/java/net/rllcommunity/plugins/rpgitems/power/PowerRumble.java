@@ -28,7 +28,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
-import net.rllcommunity.plugins.rpgitems.Plugin;
+import net.rllcommunity.plugins.rpgitems.RpgItems;
 import net.rllcommunity.plugins.rpgitems.data.Locale;
 import net.rllcommunity.plugins.rpgitems.data.RPGValue;
 import net.rllcommunity.plugins.rpgitems.power.types.PowerRightClick;
@@ -115,7 +115,7 @@ public class PowerRumble extends Power implements PowerRightClick {
                     count++;
                 }
             };
-            task.runTaskTimer(Plugin.plugin, 0, 3);
+            task.runTaskTimer(RpgItems.plugin, 0, 3);
         } else {
             player.sendMessage(ChatColor.AQUA + String.format(Locale.get("message.cooldown", Locale.getPlayerLocale(player)), ((double) (cooldown - System.currentTimeMillis() / 50)) / 20d));
         }
