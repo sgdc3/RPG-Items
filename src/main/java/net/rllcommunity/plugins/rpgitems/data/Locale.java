@@ -58,7 +58,7 @@ public class Locale extends BukkitRunnable {
     private Locale(RpgItems plugin) {
         this.plugin = plugin;
         lastUpdate = plugin.getConfig().getLong("lastLocaleUpdate", 0);
-        version = plugin.getDescription().getVersion();
+        version = "3.3";
         if (!plugin.getConfig().getString("pluginVersion", "0.0").equals(version)) {
             lastUpdate = 0;
             plugin.getConfig().set("pluginVersion", version);
