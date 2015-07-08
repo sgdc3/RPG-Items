@@ -20,26 +20,19 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
-import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import net.rllcommunity.plugins.rpgitems.RpgItems;
-import net.rllcommunity.plugins.rpgitems.item.ItemManager;
-import net.rllcommunity.plugins.rpgitems.item.RPGItem;
 
 public class Locale extends BukkitRunnable {
     
@@ -51,29 +44,10 @@ public class Locale extends BukkitRunnable {
     
     private static HashMap<String, HashMap<String, String>> localeStrings = new HashMap<String, HashMap<String,String>>();
     
-    private RpgItems plugin;
-    private long lastUpdate = 0;
-    private File dataFolder;
-    private String version;
     private Locale(RpgItems plugin) {
-        this.plugin = plugin;
-        lastUpdate = plugin.getConfig().getLong("lastLocaleUpdate", 0);
-        version = "3.3";
-        if (!plugin.getConfig().getString("pluginVersion", "0.0").equals(version)) {
-            lastUpdate = 0;
-            plugin.getConfig().set("pluginVersion", version);
-            plugin.saveConfig();
-        }
-        dataFolder = plugin.getDataFolder();
+        plugin.getDataFolder();
         reloadLocales(plugin);
-        if (!plugin.getConfig().contains("localeDownload")) {
-            plugin.getConfig().set("localeDownload", true);
-            plugin.saveConfig();
-        }
     }
-    
-    private final static String localeUpdateURL = "http://198.199.127.128/rpgitems/index.php?page=localeget&lastupdate=";
-    private final static String localeDownloadURL = "http://198.199.127.128/rpgitems/locale/%s/%s.lang";
     
     public static Set<String> getLocales() {
         return localeStrings.keySet();
@@ -81,50 +55,7 @@ public class Locale extends BukkitRunnable {
 
     @Override
     public void run() {
-        if (!plugin.getConfig().getBoolean("localeDownload", true)) {
-            cancel();
-        }
-        try {
-            URL updateURL = new URL(localeUpdateURL + lastUpdate);
-            lastUpdate = System.currentTimeMillis();
-            URLConnection conn = updateURL.openConnection();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));     
-            ArrayList<String> locales = new ArrayList<String>();
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                locales.add(line);
-            }
-            reader.close();
-            File localesFolder = new File(dataFolder, "locale/");
-            localesFolder.mkdirs();
-            for (String locale : locales) {
-                URL downloadURL = new URL(String.format(localeDownloadURL, version, locale));
-                File outFile = new File(dataFolder, "locale/" + locale + ".lang");
-                InputStream in = downloadURL.openStream();
-                FileOutputStream out = new FileOutputStream(outFile);
-                byte []buf = new byte[1024];
-                int bytesRead;
-                while ((bytesRead = in.read(buf)) != -1) {
-                    out.write(buf, 0, bytesRead);
-                }
-                in.close();
-                out.close();
-            }
-        } catch (Exception e) {
-            return;
-        }
-        (new BukkitRunnable() {            
-            @Override
-            public void run() {
-                ConfigurationSection config = plugin.getConfig();
-                config.set("lastLocaleUpdate", lastUpdate);
-                plugin.saveConfig();
-                reloadLocales(plugin);
-                for (RPGItem item : ItemManager.itemById.valueCollection()) {
-                    item.rebuild();
-                }
-            }
-        }).runTask(plugin);
+        cancel();
     }
     
     public static void reloadLocales(RpgItems plugin) {
