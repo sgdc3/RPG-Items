@@ -88,7 +88,7 @@
 		</plugins>
 		<resources>
 			<resource>
-				<filtering>true</filtering>
+				<filtering>false</filtering>
 				<directory>${project.basedir}/src/main/resources</directory>
 			</resource>
 		</resources>
